@@ -149,6 +149,13 @@ class Profile {
         } else if (chapter.type === 'Credits') {
             this.showCreditsChapter(chapter as CreditsChapter);
         }
+
+        // Sets the class 'selected' on the current nav item.
+        const navItems = document.getElementsByClassName('chapter-nav') as any;
+        for (let item of navItems) {
+            item.classList.remove('selected');
+        }
+        document.getElementById(selectedChapterName)?.classList.add('selected');
     }
 
     showIntroChapter(chapter: IntroChapter) {

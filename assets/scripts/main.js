@@ -127,6 +127,7 @@ var Profile = /** @class */ (function () {
         }
     };
     Profile.prototype.showChapter = function (selectedChapterName, isInit) {
+        var _a;
         if (isInit === void 0) { isInit = false; }
         // when page is loading first time, do not play the sound.
         if (!isInit) {
@@ -145,6 +146,13 @@ var Profile = /** @class */ (function () {
         else if (chapter.type === 'Credits') {
             this.showCreditsChapter(chapter);
         }
+        // Sets the class 'selected' on the current nav item.
+        var navItems = document.getElementsByClassName('chapter-nav');
+        for (var _i = 0, navItems_1 = navItems; _i < navItems_1.length; _i++) {
+            var item = navItems_1[_i];
+            item.classList.remove('selected');
+        }
+        (_a = document.getElementById(selectedChapterName)) === null || _a === void 0 ? void 0 : _a.classList.add('selected');
     };
     Profile.prototype.showIntroChapter = function (chapter) {
         var updatedTemplate = Templates.introTemplate;
