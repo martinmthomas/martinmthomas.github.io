@@ -32,6 +32,12 @@
     background-size: 30px 30px;
     width: 30px;
     height: 30px; }
+  .logo.net-logo {
+    background: url("../../imgs/skills/net-core.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px; }
   .logo.ts-logo {
     background: url("../../imgs/skills/typescript.png");
     background-repeat: no-repeat;

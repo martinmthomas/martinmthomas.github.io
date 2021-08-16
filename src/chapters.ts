@@ -48,7 +48,7 @@ enum SkillProficiencyEnum {
 }
 
 enum SkillsEnum {
-    ng = "ng", bs = "bs", cs = "cs", ts = "ts", sql = "sql", cos = "cos", firebase = "firebase", gcloud = "gcloud", az = "az"
+    ng = "ng", bs = "bs", cs = "cs", net = "net", ts = "ts", sql = "sql", cos = "cos", firebase = "firebase", gcloud = "gcloud", az = "az"
 }
 
 class Chapters {
@@ -72,6 +72,7 @@ class Chapters {
                 { name: SkillsEnum.ng, description: 'Angular', proficiency: SkillProficiencyEnum.expert, years: 8 },
                 { name: SkillsEnum.bs, description: 'Bootstrap', proficiency: SkillProficiencyEnum.expert, years: 8 },
                 { name: SkillsEnum.cs, description: 'CSharp', proficiency: SkillProficiencyEnum.expert, years: 12 },
+                { name: SkillsEnum.net, description: '.NET Core', proficiency: SkillProficiencyEnum.expert, years: 5 },
                 { name: SkillsEnum.ts, description: 'Typescript', proficiency: SkillProficiencyEnum.expert, years: 8 },
                 { name: SkillsEnum.az, description: 'Azure', proficiency: SkillProficiencyEnum.expert, years: 6 },
                 { name: SkillsEnum.sql, description: 'SQL Server', proficiency: SkillProficiencyEnum.expert, years: 12 },

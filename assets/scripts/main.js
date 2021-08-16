@@ -145,7 +145,7 @@ var Profile = /** @class */ (function () {
     Profile.prototype.showExperienceChapter = function (chapter) {
         var updatedTemplate = Templates.chapterDetailsTemplate;
         updatedTemplate = this.replaceWithInstanceProps(updatedTemplate, chapter);
-        updatedTemplate = this.replaceList(updatedTemplate, '{skillTemplate}', Templates.skillTemplate, 'skillId', chapter.skills, function (skill) { return SkillsEnum[skill]; });
+        updatedTemplate = this.replaceList(updatedTemplate, '{skillTemplate}', Templates.skillTemplate, 'skillId', chapter.skills, function (skill) { return skill; });
         updatedTemplate = this.replaceList(updatedTemplate, '{responsibilityTemplate}', Templates.responsibilityTemplate, 'responsibility', chapter.responsibilities, function (val) { return val; });
         updatedTemplate = this.replaceList(updatedTemplate, '{achievementTemplate}', Templates.achievementTemplate, 'achievement', chapter.achievements, function (val) { return val; });
         this.loadTemplate(updatedTemplate);

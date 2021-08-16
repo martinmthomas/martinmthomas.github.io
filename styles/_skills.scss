@@ -45,6 +45,11 @@
         @include logo();
     }
 
+    &.net-logo {
+        background: url("../../imgs/skills/net-core.png");
+        @include logo();
+    }
+
     &.ts-logo {
         background: url("../../imgs/skills/typescript.png");
         @include logo();

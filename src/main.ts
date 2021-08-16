@@ -162,16 +162,16 @@ class Profile {
 
         updatedTemplate = this.replaceWithInstanceProps(updatedTemplate, chapter);
 
-        updatedTemplate = this.replaceList(updatedTemplate, '{skillTemplate}', Templates.skillTemplate, 'skillId', chapter.skills, (skill: any) => SkillsEnum[skill]);
+        updatedTemplate = this.replaceList(updatedTemplate, '{skillTemplate}', Templates.skillTemplate, 'skillId', chapter.skills, (skill: any) => skill);
 
         updatedTemplate = this.replaceList(updatedTemplate, '{responsibilityTemplate}', Templates.responsibilityTemplate, 'responsibility', chapter.responsibilities, (val: any) => val);
 
         updatedTemplate = this.replaceList(updatedTemplate, '{achievementTemplate}', Templates.achievementTemplate, 'achievement', chapter.achievements, (val: any) => val);
-        
+
         this.loadTemplate(updatedTemplate);
-        
+
         // Hides achievements section if there are none.
-        if(!chapter.achievements || chapter.achievements.length <= 0) {
+        if (!chapter.achievements || chapter.achievements.length <= 0) {
             const header = document.getElementById('achievements-header');
             header!.style.display = 'none';
         }
