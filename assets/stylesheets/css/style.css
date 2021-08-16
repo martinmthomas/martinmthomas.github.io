@@ -121,6 +121,7 @@ nav {
   display: flex;
   flex-direction: column;
   margin: auto 40px;
+  margin-top: 160px;
   min-width: 175px; }
   nav,
   nav .reel {
@@ -186,6 +187,7 @@ main {
   max-width: 800px;
   margin-right: auto; }
   main .chapter-details {
+    width: 100%;
     margin: auto;
     padding: 25px;
     border-radius: 10px;
@@ -223,7 +225,6 @@ main {
 body {
   font-family: "Cairo", sans-serif;
   display: flex;
-  flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
   width: 100%;
@@ -233,31 +234,39 @@ body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   backdrop-filter: blur(25px); }
+  body header {
+    text-align: right;
+    margin: 80px 0px; }
+  body main {
+    display: flex;
+    width: 800px;
+    margin-bottom: auto; }
   body .icon-btn {
     backdrop-filter: blur(25px);
     padding: 7px;
     border-radius: 7px;
     box-shadow: 2px 2px 15px black;
     cursor: pointer; }
-  body header {
-    text-align: right; }
-    body header .speaker {
+  body .speaker {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer; }
+    body .speaker .speaker-icon {
+      width: 30px;
       position: absolute;
-      display: inline-block;
-      top: 40px;
-      left: calc(100% - 100px);
-      cursor: pointer; }
-      body header .speaker .speaker-icon {
-        width: 30px; }
-      body header .speaker .speaker-close-icon {
-        width: 18px;
-        position: absolute;
-        top: 13px;
-        left: 15px; }
-  body .content {
-    display: flex;
-    margin: auto 0px; }
-  body .mb-0 {
-    margin-bottom: 0; }
-  body .mt-0 {
-    margin-top: 0; }
+      left: calc(100% - 70px); }
+    body .speaker .speaker-close-icon {
+      width: 18px;
+      position: absolute;
+      top: 13px;
+      left: -55px; }
+
+.content {
+  display: flex;
+  flex-direction: column; }
+
+.mb-0 {
+  margin-bottom: 0; }
+
+.mt-0 {
+  margin-top: 0; }

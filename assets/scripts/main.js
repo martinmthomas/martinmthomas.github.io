@@ -103,7 +103,7 @@ var Profile = /** @class */ (function () {
         this.playSound('unmute_audio', true);
         var speakerClose = document.getElementById('speaker-close');
         if (speakerClose.style.display === 'none') {
-            speakerClose.style.display = 'block';
+            speakerClose.style.display = 'inline-block';
             localStorage.setItem('speakerMute', 'true');
         }
         else {

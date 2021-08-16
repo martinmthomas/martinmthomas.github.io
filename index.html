@@ -25,30 +25,31 @@
         This is still a work in progress. Please open in a desktop browser to
         view this page.
     </div>
-    <header class="hide-sm">
-        <div class="speaker" id="speaker_btn">
-            <img src="assets/imgs/bullhorn.png" alt="mute or unmute"
-                class="speaker-icon icon-btn">
-            <img src="assets/imgs/close.png" alt="mute"
-                class="speaker-close-icon" style="display: none;"
-                id="speaker-close">
+
+    <nav class="reel hide-sm">
+        <div class="reel-wrapper">
+            <div class="chapter-navs" id="chapter-navs"></div>
         </div>
-    </header>
 
-    <div class="content hide-sm">
+        <div class="scroll-nav-group">
+            <img src="assets/imgs/reel.png" alt="Scroll Down"
+                class="scroll-nav icon-btn" id="scroll_down">
+            <img src="assets/imgs/reel.png" alt="Scroll Up"
+                class="scroll-nav scroll-nav-up icon-btn disabled"
+                id="scroll_up">
+        </div>
+    </nav>
 
-        <nav class="reel">
-            <div class="reel-wrapper">
-                <div class="chapter-navs" id="chapter-navs"></div>
+    <div class="hide-sm content">
+        <header class="hide-sm">
+            <div class="speaker" id="speaker_btn">
+                <img src="assets/imgs/bullhorn.png" alt="mute or unmute"
+                    class="speaker-icon icon-btn">
+                <img src="assets/imgs/close.png" alt="mute"
+                    class="speaker-close-icon" style="display: none;"
+                    id="speaker-close">
             </div>
-
-            <div class="scroll-nav-group">
-                <img src="assets/imgs/reel.png" alt="Scroll Down"
-                    class="scroll-nav icon-btn" id="scroll_down">
-                <img src="assets/imgs/reel.png" alt="Scroll Up"
-                    class="scroll-nav scroll-nav-up icon-btn disabled" id="scroll_up">
-            </div>
-        </nav>
+        </header>
 
         <main id="main"></main>
     </div>
