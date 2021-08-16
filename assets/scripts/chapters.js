@@ -168,14 +168,13 @@ var Chapters = /** @class */ (function () {
             ],
             achievements: []
         },
-        // {
-        //     id: 'end',
-        //     logoUrl: '',
-        //     companyName: '',
-        //     companyShort: '',
-        //     role: '',
-        //     roleShort: 'The End'
-        // } as any
+        {
+            type: 'Credits',
+            id: 'credits',
+            credits: [
+                "<div>Icons made by \n                <a href=\"https://www.flaticon.com/authors/pixel-perfect\" title=\"Pixel perfect\">\n                Pixel perfect</a> from \n                <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></div>"
+            ]
+        }
     ];
     return Chapters;
 }());

@@ -73,7 +73,7 @@ class Profile {
     }
 
     getCurrentScrollPos() {
-        return parseInt(
+        return parseFloat(
             window.getComputedStyle(document.documentElement)
                 .getPropertyValue('--nav-translate')
                 .split('px')[0]
@@ -131,6 +131,8 @@ class Profile {
             this.showIntroChapter(chapter as IntroChapter);
         } else if (chapter.type === 'Skills') {
             this.showSkillsChapter(chapter as SkillsChapter);
+        } else if (chapter.type === 'Credits') {
+            this.showCreditsChapter(chapter as CreditsChapter);
         }
     }
 
@@ -175,6 +177,15 @@ class Profile {
             const header = document.getElementById('achievements-header');
             header!.style.display = 'none';
         }
+    }
+
+    showCreditsChapter(chapter: CreditsChapter) {
+        let updatedTemplate = Templates.creditsTemplate;
+
+        updatedTemplate = this.replaceWithInstanceProps(updatedTemplate, chapter);
+        updatedTemplate = this.replaceList(updatedTemplate, '{creditTemplate}', Templates.creditTemplate, 'credit', chapter.credits, (val) => val);
+
+        this.loadTemplate(updatedTemplate);
     }
 
     // Loads template in the html document

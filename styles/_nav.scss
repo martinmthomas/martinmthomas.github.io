@@ -37,28 +37,6 @@ nav {
                 width: 0;
                 background: transparent;
             }
-
-            // &::before{
-            //     content: ' ';
-            //     background-color: rgb(52, 52, 52);
-            //     background-image: url("../../imgs/rectangle.svg");
-            //     width: 16px;
-            //     background-position-x: 4px;
-
-            //     height: 1000px;
-            //     overflow: hidden;
-            //     background-repeat: repeat;
-            //     background-attachment: local;
-            // }
-
-            // .side {
-            // background-color: rgb(52, 52, 52);
-            // background-image: url("../../imgs/rectangle.svg");
-            // width: 16px;
-            // background-position-x: 4px;
-
-            // height: 700px;
-            // }
         }
     }
 
@@ -79,7 +57,6 @@ nav {
     }
 
     .chapter-navs {
-        // background: rgba(0, 0, 0, 0.7);
         color: $chapter-color;
         transform: translateY(var(--nav-translate));
         transition: all 1.2s ease-in;

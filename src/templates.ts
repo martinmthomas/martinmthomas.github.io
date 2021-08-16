@@ -26,6 +26,8 @@ class Templates {
 
     static readonly educationTemplate = `<li>{education}</li>`
 
+    static readonly creditTemplate = `<li>{credit}</li>`
+
     static readonly certificationTemplate = `
     <li>
         <a href="{externalLink}" class="cert-link" target="_blank"><span class="cert-name">{name}</span></a>
@@ -61,6 +63,12 @@ class Templates {
     </article>
     `;
 
+    static readonly creditsTemplate = `
+    <article class="chapter-details">
+        <ul class="credits">{creditTemplate}</ul>
+    </article>
+    `
+    
     static readonly chapterDetailsTemplate = `
     <article class="chapter-details">
             <div class="company">

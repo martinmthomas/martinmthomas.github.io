@@ -1,5 +1,5 @@
 interface Chapter {
-    type: 'Intro' | 'Skills' | 'Experience';
+    type: 'Intro' | 'Skills' | 'Experience' | 'Credits';
     id: string;
 }
 
@@ -28,6 +28,11 @@ interface IntroChapter extends Chapter {
 interface SkillsChapter extends Chapter {
     type: 'Skills';
     skills: Skill[];
+}
+
+interface CreditsChapter extends Chapter {
+    type: 'Credits';
+    credits: string[];
 }
 
 interface Certification {
@@ -210,13 +215,15 @@ class Chapters {
             ],
             achievements: []
         } as ExperienceChapter,
-        // {
-        //     id: 'end',
-        //     logoUrl: '',
-        //     companyName: '',
-        //     companyShort: '',
-        //     role: '',
-        //     roleShort: 'The End'
-        // } as any
+        {
+            type: 'Credits',
+            id: 'credits',
+            credits: [
+                `<div>Icons made by 
+                <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">
+                Pixel perfect</a> from 
+                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>`
+            ]
+        } as CreditsChapter
     ];
 }

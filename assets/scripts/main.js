@@ -72,7 +72,7 @@ var Profile = /** @class */ (function () {
         this.setCurrentScrollPos(newPos);
     };
     Profile.prototype.getCurrentScrollPos = function () {
-        return parseInt(window.getComputedStyle(document.documentElement)
+        return parseFloat(window.getComputedStyle(document.documentElement)
             .getPropertyValue('--nav-translate')
             .split('px')[0]);
     };
@@ -128,6 +128,9 @@ var Profile = /** @class */ (function () {
         else if (chapter.type === 'Skills') {
             this.showSkillsChapter(chapter);
         }
+        else if (chapter.type === 'Credits') {
+            this.showCreditsChapter(chapter);
+        }
     };
     Profile.prototype.showIntroChapter = function (chapter) {
         var updatedTemplate = Templates.introTemplate;
@@ -154,6 +157,12 @@ var Profile = /** @class */ (function () {
             var header = document.getElementById('achievements-header');
             header.style.display = 'none';
         }
+    };
+    Profile.prototype.showCreditsChapter = function (chapter) {
+        var updatedTemplate = Templates.creditsTemplate;
+        updatedTemplate = this.replaceWithInstanceProps(updatedTemplate, chapter);
+        updatedTemplate = this.replaceList(updatedTemplate, '{creditTemplate}', Templates.creditTemplate, 'credit', chapter.credits, function (val) { return val; });
+        this.loadTemplate(updatedTemplate);
     };
     // Loads template in the html document
     Profile.prototype.loadTemplate = function (template) {
