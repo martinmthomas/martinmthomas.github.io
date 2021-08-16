@@ -1,7 +1,7 @@
 
 class Profile {
     navHeight = 108.5;
-    numOfChaptersDisplayed = 4;
+    numOfChaptersDisplayed = 5;
 
     init() {
 
@@ -29,7 +29,7 @@ class Profile {
         document.documentElement.style.setProperty('--nav-max-height', (this.navHeight * this.numOfChaptersDisplayed) + 'px');
 
         // displays a default chapter
-        this.showChapter('intro');
+        this.showChapter('intro', true);
     }
 
     showNav() {
@@ -82,15 +82,27 @@ class Profile {
 
     setCurrentScrollPos(value: number) {
         const lastPosAllowed = (Chapters.items.length - this.numOfChaptersDisplayed) * (-1) * this.navHeight;
-        if (value > 0) {
+        if (value >= 0) {
             value = 0;
-        } else if (value < lastPosAllowed) {
+            this.disableBtn('scroll_up');
+        } else if (value <= lastPosAllowed) {
             value = lastPosAllowed;
+            this.disableBtn('scroll_down');
         } else {
-            this.playSound('film_rolling');
+            this.enableScrollBtns();
         }
 
+        this.playSound('film_rolling');
         document.documentElement.style.setProperty('--nav-translate', `${value}px`);
+    }
+
+    disableBtn(id: string) {
+        document.getElementById(id)!.classList.add('disabled');
+    }
+
+    enableScrollBtns() {
+        document.getElementById('scroll_up')!.classList.remove('disabled');
+        document.getElementById('scroll_down')!.classList.remove('disabled');
     }
 
     toggleSpeaker() {
@@ -121,8 +133,11 @@ class Profile {
         }
     }
 
-    showChapter(selectedChapterName: any) {
-        this.playSound('click_audio');
+    showChapter(selectedChapterName: any, isInit = false) {
+        // when page is loading first time, do not play the sound.
+        if (!isInit) {
+            this.playSound('click_audio');
+        }
 
         const chapter = Chapters.items.filter(c => c.id === selectedChapterName)[0];
         if (chapter.type === 'Experience') {

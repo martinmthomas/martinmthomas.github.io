@@ -125,9 +125,13 @@ nav {
       padding: 5px;
       margin: 0px 5px;
       width: 30px;
-      background: rgba(255, 255, 255, 0.3); }
+      background: rgba(255, 255, 255, 0.3);
+      user-select: none; }
     nav .scroll-nav-group .scroll-nav-up {
       transform: rotate(180deg); }
+    nav .scroll-nav-group .disabled {
+      opacity: 0.5;
+      pointer-events: none; }
   nav .chapter-navs {
     color: #b5afad;
     transform: translateY(var(--nav-translate));

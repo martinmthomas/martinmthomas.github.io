@@ -49,10 +49,16 @@ nav {
             margin: 0px 5px;
             width: 30px;
             background: rgba(255, 255, 255, 0.3);
+            user-select: none;
         }
 
         .scroll-nav-up {
             transform: rotate(180deg);
+        }
+
+        .disabled {
+            opacity: 0.5;
+            pointer-events: none;
         }
     }
 

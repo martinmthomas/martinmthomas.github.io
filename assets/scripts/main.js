@@ -7,7 +7,7 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from) {
 var Profile = /** @class */ (function () {
     function Profile() {
         this.navHeight = 108.5;
-        this.numOfChaptersDisplayed = 4;
+        this.numOfChaptersDisplayed = 5;
     }
     Profile.prototype.init = function () {
         var _this = this;
@@ -33,7 +33,7 @@ var Profile = /** @class */ (function () {
         // are visible by default.
         document.documentElement.style.setProperty('--nav-max-height', (this.navHeight * this.numOfChaptersDisplayed) + 'px');
         // displays a default chapter
-        this.showChapter('intro');
+        this.showChapter('intro', true);
     };
     Profile.prototype.showNav = function () {
         var _this = this;
@@ -78,16 +78,26 @@ var Profile = /** @class */ (function () {
     };
     Profile.prototype.setCurrentScrollPos = function (value) {
         var lastPosAllowed = (Chapters.items.length - this.numOfChaptersDisplayed) * (-1) * this.navHeight;
-        if (value > 0) {
+        if (value >= 0) {
             value = 0;
+            this.disableBtn('scroll_up');
         }
-        else if (value < lastPosAllowed) {
+        else if (value <= lastPosAllowed) {
             value = lastPosAllowed;
+            this.disableBtn('scroll_down');
         }
         else {
-            this.playSound('film_rolling');
+            this.enableScrollBtns();
         }
+        this.playSound('film_rolling');
         document.documentElement.style.setProperty('--nav-translate', value + "px");
+    };
+    Profile.prototype.disableBtn = function (id) {
+        document.getElementById(id).classList.add('disabled');
+    };
+    Profile.prototype.enableScrollBtns = function () {
+        document.getElementById('scroll_up').classList.remove('disabled');
+        document.getElementById('scroll_down').classList.remove('disabled');
     };
     Profile.prototype.toggleSpeaker = function () {
         this.playSound('unmute_audio', true);
@@ -116,8 +126,12 @@ var Profile = /** @class */ (function () {
             ;
         }
     };
-    Profile.prototype.showChapter = function (selectedChapterName) {
-        this.playSound('click_audio');
+    Profile.prototype.showChapter = function (selectedChapterName, isInit) {
+        if (isInit === void 0) { isInit = false; }
+        // when page is loading first time, do not play the sound.
+        if (!isInit) {
+            this.playSound('click_audio');
+        }
         var chapter = Chapters.items.filter(function (c) { return c.id === selectedChapterName; })[0];
         if (chapter.type === 'Experience') {
             this.showExperienceChapter(chapter);
