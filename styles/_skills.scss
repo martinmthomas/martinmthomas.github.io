@@ -65,6 +65,11 @@
         @include logo();
     }
 
+    &.servicebus-logo {
+        background: url("../../imgs/skills/service-bus.png");
+        @include logo();
+    }
+
     &.cos-logo {
         background: url("../../imgs/skills/cosmos.png");
         @include logo();
@@ -78,6 +83,21 @@
     &.firebase-logo {
         background: url("../../imgs/skills/firebase.png");
         margin: 0px 6px;
+        @include logo();
+    }
+
+    &.nodejs-logo {
+        background: url("../../imgs/skills/nodejs.png");
+        @include logo(40px, 30px, 40px, 30px);
+    }
+
+    &.netframework-logo {
+        background: url("../../imgs/skills/net-framework.png");
+        @include logo(35px, 30px, 35px, 30px);
+    }
+
+    &.jq-logo {
+        background: url("../../imgs/skills/jquery.jpg");
         @include logo();
     }
 }

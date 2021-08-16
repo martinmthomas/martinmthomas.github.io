@@ -53,7 +53,10 @@ enum SkillProficiencyEnum {
 }
 
 enum SkillsEnum {
-    ng = "ng", bs = "bs", cs = "cs", net = "net", ts = "ts", sql = "sql", cos = "cos", firebase = "firebase", gcloud = "gcloud", az = "az"
+    ng = "ng", bs = "bs", cs = "cs", net = "net", netframework = "netframework",
+    ts = "ts", sql = "sql", cos = "cos", firebase = "firebase",
+    gcloud = "gcloud", az = "az", servicebus = "servicebus",
+    nodejs = "nodejs", jq = "jq",
 }
 
 class Chapters {
@@ -80,8 +83,10 @@ class Chapters {
                 { name: SkillsEnum.net, description: '.NET Core', proficiency: SkillProficiencyEnum.expert, years: 5 },
                 { name: SkillsEnum.ts, description: 'Typescript', proficiency: SkillProficiencyEnum.expert, years: 8 },
                 { name: SkillsEnum.az, description: 'Azure', proficiency: SkillProficiencyEnum.expert, years: 6 },
+                { name: SkillsEnum.servicebus, description: 'Azure Service Bus', proficiency: SkillProficiencyEnum.expert, years: 4 },
                 { name: SkillsEnum.sql, description: 'SQL Server', proficiency: SkillProficiencyEnum.expert, years: 12 },
                 { name: SkillsEnum.cos, description: 'Cosmos DB', proficiency: SkillProficiencyEnum.intermediate, years: 4 },
+                { name: SkillsEnum.nodejs, description: 'Node.js', proficiency: SkillProficiencyEnum.intermediate, years: 1 },
                 { name: SkillsEnum.gcloud, description: 'Google Cloud', proficiency: SkillProficiencyEnum.intermediate, years: 1 },
                 { name: SkillsEnum.firebase, description: 'Firebase', proficiency: SkillProficiencyEnum.intermediate, years: 1 }
             ]
@@ -96,7 +101,7 @@ class Chapters {
             roleShort: 'Lead Engineer',
             yearFrom: 'July 2021',
             yearTo: 'present',
-            skills: [SkillsEnum.ng, SkillsEnum.cs, SkillsEnum.ts, SkillsEnum.gcloud, SkillsEnum.firebase, SkillsEnum.sql],
+            skills: [SkillsEnum.ng, SkillsEnum.net, SkillsEnum.nodejs, SkillsEnum.cs, SkillsEnum.ts, SkillsEnum.gcloud, SkillsEnum.firebase, SkillsEnum.sql],
             summary: `Cape is an early stage startup looking to
             launch a BNPL product for Small and Medium Businesses in the
             APAC region. I have been part of their journey since the very
@@ -120,7 +125,7 @@ class Chapters {
             roleShort: 'Senior Engineer',
             yearFrom: 'July 2020',
             yearTo: 'July 2021',
-            skills: [SkillsEnum.ng, SkillsEnum.cs, SkillsEnum.ts, SkillsEnum.az, SkillsEnum.sql],
+            skills: [SkillsEnum.ng, SkillsEnum.net, SkillsEnum.cs, SkillsEnum.ts, SkillsEnum.az, SkillsEnum.servicebus, SkillsEnum.sql, SkillsEnum.cos],
             summary: `WooliesX is the digital arm of Woolworths working towards creating better everyday experiences for its customers. 
                 I worked as a Senior Software Engineer with the <em>Subscriptions</em> and <em>Checkout</em> squad.`,
             responsibilities: [
@@ -141,7 +146,7 @@ class Chapters {
             roleShort: 'Senior Engineer',
             yearFrom: 'Oct 2019',
             yearTo: 'July 2020',
-            skills: [SkillsEnum.ng, SkillsEnum.cs, SkillsEnum.ts, SkillsEnum.az, SkillsEnum.sql],
+            skills: [SkillsEnum.ng, SkillsEnum.net, SkillsEnum.cs, SkillsEnum.ts, SkillsEnum.az, SkillsEnum.servicebus, SkillsEnum.sql, SkillsEnum.cos],
             summary: `Flare provides leading HR software and Superannuation products to help both employers and employees alike.`,
             responsibilities: [
                 `Following a decentralized team style, work with stakeholders to understand the requirements and help team in designing the application architecture.`,
@@ -161,7 +166,7 @@ class Chapters {
             roleShort: 'Lead/Senior Engg.',
             yearFrom: 'Dec 2018',
             yearTo: 'Oct 2019',
-            skills: [SkillsEnum.ng, SkillsEnum.cs, SkillsEnum.ts, SkillsEnum.az, SkillsEnum.sql],
+            skills: [SkillsEnum.ng, SkillsEnum.net, SkillsEnum.cs, SkillsEnum.ts, SkillsEnum.az, SkillsEnum.servicebus, SkillsEnum.sql, SkillsEnum.cos],
             summary: `Ranked #2 on 2018 AFR’s Most Innovative Companies List, Medical Director is a name well 
                 known among GPs, Specialists and Hospitals in Australia. Helix is the web platform that helps 
                 doctors in managing patients’ records, prescribing medications and doing all other different 
@@ -171,7 +176,7 @@ class Chapters {
                 `Develop features using Angular7, .NET Core, Azure SQL Database and NServiceBus (messaging).`
             ],
             achievements: [
-                `Worked with a colleague, as part of our Software Academy initiative, which is separate to regular team activities, to create a Load Testing framework using Locust, Python and .NET Core`,
+                `Worked with a colleague, as part of the Software Academy initiative, which is separate to regular team activities, to create a Load Testing framework using Locust, Python and .NET Core`,
                 `Early adopter of Trunk Based Development in the company to help speed up the delivery time`
             ]
         } as ExperienceChapter,
@@ -185,7 +190,7 @@ class Chapters {
             roleShort: 'Lead/Senior Engg.',
             yearFrom: 'Jan 2015',
             yearTo: 'Dec 2018',
-            skills: [SkillsEnum.ng, SkillsEnum.cs, SkillsEnum.ts, SkillsEnum.az, SkillsEnum.sql],
+            skills: [SkillsEnum.ng, SkillsEnum.net, SkillsEnum.cs, SkillsEnum.ts, SkillsEnum.az, SkillsEnum.servicebus, SkillsEnum.sql],
             summary: `Brilliance Fin Tech is a leading provider of loan pricing solutions to Banks worldwide. 
                 Dealpoint, the application platform, helps Relationship Managers to create deals that are best 
                 for both the banks and its customers.`,
@@ -207,8 +212,8 @@ class Chapters {
             roleShort: 'Senior Engineer',
             yearFrom: 'Jan 2010',
             yearTo: 'Jan 2015',
-            skills: [SkillsEnum.ng, SkillsEnum.cs, SkillsEnum.ts, SkillsEnum.az, SkillsEnum.sql],
-            summary: `HCL is a leading software services company that provides custom solutions to its customers. As HCL is a services company, I have played different roles during my tenure in HCL working for Commonwealth Bank of Australia.`,
+            skills: [SkillsEnum.ng, SkillsEnum.netframework, SkillsEnum.jq, SkillsEnum.cs, SkillsEnum.ts, SkillsEnum.sql],
+            summary: `HCL is a leading software services company that provides custom solutions to its customers. As HCL is a services company, I have played different roles during my tenure at HCL working for Commonwealth Bank of Australia.`,
             responsibilities: [
                 `Develop ASP.NET 3.5 web applications for CommBank platform like School Banking, Credit card comparison, etc.`,
                 `Develop .NET Winform applications using .NET 2.0, PLSQL 7.0 and Oracle 10g.`

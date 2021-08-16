@@ -56,6 +56,12 @@
     background-size: 30px 30px;
     width: 30px;
     height: 30px; }
+  .logo.servicebus-logo {
+    background: url("../../imgs/skills/service-bus.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px; }
   .logo.cos-logo {
     background: url("../../imgs/skills/cosmos.png");
     background-repeat: no-repeat;
@@ -71,6 +77,24 @@
   .logo.firebase-logo {
     background: url("../../imgs/skills/firebase.png");
     margin: 0px 6px;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px; }
+  .logo.nodejs-logo {
+    background: url("../../imgs/skills/nodejs.png");
+    background-repeat: no-repeat;
+    background-size: 40px 30px;
+    width: 40px;
+    height: 30px; }
+  .logo.netframework-logo {
+    background: url("../../imgs/skills/net-framework.png");
+    background-repeat: no-repeat;
+    background-size: 35px 30px;
+    width: 35px;
+    height: 30px; }
+  .logo.jq-logo {
+    background: url("../../imgs/skills/jquery.jpg");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     width: 30px;
