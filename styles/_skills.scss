@@ -1,0 +1,102 @@
+@mixin logo($container-width: 30px, $container-height: 30px, $image-width: 30px, $image-height: 30px) {
+    background-repeat: no-repeat;
+    background-size: $image-width $image-height;
+    width: $container-width;
+    height: $container-height;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    margin: auto 0px;
+
+    &.brilliance {
+        width: 80px;
+    }
+
+    &.hcl {
+        width: 80px;
+    }
+}
+
+.skills {
+    padding: 10px 0px;
+
+    > .logo {
+        margin: 0px 4px;
+    }
+}
+
+.logo {
+    display: inline-block;
+
+    &.ng-logo {
+        background: url("../../imgs/skills/angular.svg");
+        @include logo();
+    }
+
+    &.bs-logo {
+        background: url("../../imgs/skills/bootstrap.png");
+        @include logo();
+    }
+
+    &.cs-logo {
+        background: url("../../imgs/skills/csharp.png");
+        @include logo();
+    }
+
+    &.ts-logo {
+        background: url("../../imgs/skills/typescript.png");
+        @include logo();
+    }
+
+    &.gcloud-logo {
+        background: url("../../imgs/skills/gcloud.png");
+        @include logo(35px, 30px, 45px, 30px);
+    }
+
+    &.az-logo {
+        background: url("../../imgs/skills/azure.png");
+        @include logo();
+    }
+
+    &.cos-logo {
+        background: url("../../imgs/skills/cosmos.png");
+        @include logo();
+    }
+
+    &.sql-logo {
+        background: url("../../imgs/skills/mssqlserver.svg");
+        @include logo();
+    }
+
+    &.firebase-logo {
+        background: url("../../imgs/skills/firebase.png");
+        margin: 0px 6px;
+        @include logo();
+    }
+}
+
+.skills-summary {
+    width: 400px;
+
+    li {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    span {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+
+    span.logo {
+        flex-grow: 0.5;
+    }
+
+    .logo.firebase-logo {
+        // firebase-logo has some margin for the inline display with other logos which 
+        // is not required in the skills-summary section
+        margin: 0;
+    }
+}

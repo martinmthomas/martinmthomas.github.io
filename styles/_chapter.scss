@@ -1,0 +1,45 @@
+main {
+    display: flex;
+    max-width: 800px;
+    margin-right: auto;
+
+    .chapter-details {
+        margin: auto;
+        padding: 25px;
+        border-radius: 10px;
+        margin-right: 25px;
+        backdrop-filter: blur(25px);
+        box-shadow: 0px 10px 20px black;
+
+        .company {
+            display: flex;
+
+            .name {
+                font-size: 24px;
+                margin-left: 12px;
+            }
+        }
+
+        .role {
+            background: #a2b1be;
+            border-radius: 7px;
+            padding: 0px 7px;
+            display: inline-block;
+            font-weight: 600;
+            box-shadow: inset 0 0 6px #5f666c;
+        }
+
+        .year {
+            display: inline-block;
+
+            & > span {
+                margin: 0px 5px;
+                font-size: 14px;
+            }
+        }
+
+        .cert-since {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+@import "skills";
+@import "nav";
+@import "chapter";
+@import "responsibilities";
+
+.hide-sm {
+    @media (max-width: 750px) {
+        display: none !important;
+    }
+}
+
+.show-sm {
+    @media (min-width: 751px) {
+        display: none !important;
+    }
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background: url("../../imgs/nostalgia.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(25px);
+
+    .icon-btn {
+        backdrop-filter: blur(25px);
+        padding: 7px;
+        border-radius: 7px;
+        box-shadow: 2px 2px 15px black;
+        cursor: pointer;
+    }
+
+    header {
+        text-align: right;
+
+        .speaker {
+            position: absolute;
+            display: inline-block;
+            top: 40px;
+            left: calc(100% - 100px);
+            cursor: pointer;
+
+            .speaker-icon {
+                width: 30px;
+            }
+
+            .speaker-close-icon {
+                width: 18px;
+                position: absolute;
+                top: 13px;
+                left: 15px;
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        margin: auto 0px;
+    }
+
+    .mb-0 {
+        margin-bottom: 0;
+    }
+
+    .mt-0 {
+        margin-top: 0;
+    }
+}

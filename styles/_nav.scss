@@ -1,0 +1,121 @@
+:root {
+    --nav-max-height: 324px;
+    --nav-translate: 0px;
+}
+
+$chapter-color: #b5afad;
+$nav-width: 175px;
+
+nav {
+    display: flex;
+    flex-direction: column;
+    margin: auto 40px;
+    min-width: $nav-width;
+
+    &,
+    .reel {
+        display: flex;
+        flex-direction: column;
+
+        &-wrapper {
+            display: flex;
+            box-shadow: 2px 5px 7px black;
+
+            // background: rgba(0, 0, 0, 0.7);
+
+            background-image: url("../../imgs/film.png");
+            background-size: $nav-width;
+            width: $nav-width;
+
+            height: var(--nav-max-height);
+            overflow: scroll;
+            overflow-x: hidden;
+            background-repeat: repeat-y;
+
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                width: 0;
+                background: transparent;
+            }
+
+            // &::before{
+            //     content: ' ';
+            //     background-color: rgb(52, 52, 52);
+            //     background-image: url("../../imgs/rectangle.svg");
+            //     width: 16px;
+            //     background-position-x: 4px;
+
+            //     height: 1000px;
+            //     overflow: hidden;
+            //     background-repeat: repeat;
+            //     background-attachment: local;
+            // }
+
+            // .side {
+            // background-color: rgb(52, 52, 52);
+            // background-image: url("../../imgs/rectangle.svg");
+            // width: 16px;
+            // background-position-x: 4px;
+
+            // height: 700px;
+            // }
+        }
+    }
+
+    .scroll-nav-group {
+        text-align: center;
+        margin: 20px 0px;
+
+        .scroll-nav {
+            padding: 5px;
+            margin: 0px 5px;
+            width: 30px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .scroll-nav-up {
+            transform: rotate(180deg);
+        }
+    }
+
+    .chapter-navs {
+        // background: rgba(0, 0, 0, 0.7);
+        color: $chapter-color;
+        transform: translateY(var(--nav-translate));
+        transition: all 1.2s ease-in;
+    }
+
+    .chapter-nav {
+        min-width: 125px;
+        padding: 20px;
+        border-bottom: 0.5px solid $chapter-color;
+
+        // Setting 68px height translates to 108.5px for each nav item. This number is important for
+        // the javascript scrolling function and the variable `navHeight`
+        height: 68px;
+
+        &.default {
+            font-size: 20px;
+            padding: 40px 0px 0px 55px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        .company {
+            display: flex;
+
+            .logo {
+                width: 25px;
+                height: 25px;
+                margin: auto 0px;
+            }
+
+            .name {
+                font-size: 20px;
+                margin-left: 10px;
+            }
+        }
+    }
+}

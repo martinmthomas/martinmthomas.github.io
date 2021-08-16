@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Martin's Profile/Resume">
+    <meta name="author" content="Martin Mathai Thomas">
+    <meta name="keyword"
+        content="Martin Mathai Thomas, Flashback, Profile, Resume">
+
+    <title>Flashback: A Glimpse Into My Career</title>
+
+    <link rel="stylesheet" href="assets/stylesheets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="warning show-sm">
+        This is still a work in progress. Please open in a desktop browser to view this page.
+    </div>
+    <header class="hide-sm">
+        <div class="speaker" id="speaker_btn">
+            <img src="assets/imgs/bullhorn.png" alt="mute or unmute"
+                class="speaker-icon icon-btn">
+            <img src="assets/imgs/close.png" alt="mute"
+                class="speaker-close-icon" style="display: none;"
+                id="speaker-close">
+        </div>
+    </header>
+
+    <div class="content hide-sm">
+
+        <nav class="reel">
+            <div class="reel-wrapper">
+                <div class="chapter-navs" id="chapter-navs"></div>
+            </div>
+
+            <div class="scroll-nav-group">
+                <img src="assets/imgs/reel.png" alt="Scroll Down"
+                    class="scroll-nav icon-btn" id="scroll_down">
+                <img src="assets/imgs/reel.png" alt="Scroll Up"
+                    class="scroll-nav scroll-nav-up icon-btn" id="scroll_up">
+            </div>
+        </nav>
+
+        <main id="main"></main>
+    </div>
+
+    <script src="assets/scripts/templates.js"></script>
+    <script src="assets/scripts/chapters.js"></script>
+    <script src="assets/scripts/main.js"></script>
+    <audio src="assets/sounds/click.wav" id="click_audio"></audio>
+    <audio src="assets/sounds/bubble.wav" id="unmute_audio"></audio>
+    <audio src="assets/sounds/film-rolling.m4a" id="film_rolling"></audio>
+</body>
+
+</html>
