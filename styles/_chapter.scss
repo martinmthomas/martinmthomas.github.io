@@ -13,6 +13,7 @@ main {
         border-radius: 10px;
         backdrop-filter: blur(25px);
         box-shadow: 0px 10px 20px black;
+        background: linear-gradient(90deg, rgba(144, 144, 144, 0.5), transparent);
 
         .company {
             display: flex;
