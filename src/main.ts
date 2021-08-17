@@ -36,7 +36,7 @@ class Profile {
 
     /** Used in mobile view to toggle Side Nav */
     toggleSideNav() {
-        const className = 'hide-sm';
+        const className = 'hide-sm-animate';
         const nav = document.getElementById('nav');
         if (nav?.classList.contains(className)) {
             nav.classList.remove(className);

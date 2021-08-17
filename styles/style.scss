@@ -8,6 +8,16 @@
     @media (max-width: $mobile-breakpoint) {
         display: none !important;
     }
+
+    // This is used in side nav. display property is not animatable. 
+    // So, we need to use height instead. However, using height to hide 
+    // elements will not work always. Therefore, we need both display and height
+    // based solutions.
+    &-animate {
+        @media (max-width: $mobile-breakpoint) {
+            height: 0px;
+        }
+    }
 }
 
 .show-sm {

@@ -17,6 +17,10 @@ nav {
         position: absolute;
         z-index: 9999;
         margin: 100px 10px 10px 10px;
+
+        // shows animation when nav is displayed or hidden
+        height: var(--nav-max-height);
+        transition: height 400ms;
     }
 
     &,

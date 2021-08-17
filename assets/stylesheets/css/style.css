@@ -132,7 +132,9 @@ nav {
     nav {
       position: absolute;
       z-index: 9999;
-      margin: 100px 10px 10px 10px; } }
+      margin: 100px 10px 10px 10px;
+      height: var(--nav-max-height);
+      transition: height 400ms; } }
   nav-wrapper,
   nav .reel-wrapper {
     display: flex;
@@ -230,6 +232,10 @@ main {
 @media (max-width: 700px) {
   .hide-sm {
     display: none !important; } }
+
+@media (max-width: 700px) {
+  .hide-sm-animate {
+    height: 0px; } }
 
 @media (min-width: 700px) {
   .show-sm {
