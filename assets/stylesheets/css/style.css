@@ -104,9 +104,15 @@
   .skills-summary {
     width: 400px; } }
 
+@media (max-width: 700px) {
+  .skills-summary {
+    padding-inline-start: 0px; } }
+
 .skills-summary li {
   display: flex;
   margin-bottom: 10px; }
+  .skills-summary li .skill-proficiency > em {
+    font-size: 12px; }
 
 .skills-summary span {
   flex-grow: 1;
@@ -198,7 +204,7 @@ main {
       max-width: 800px;
       margin-right: auto; } }
   main .chapter-details {
-    width: 100%;
+    width: calc(100vw - 70px);
     margin: auto;
     padding: 25px;
     border-radius: 10px;

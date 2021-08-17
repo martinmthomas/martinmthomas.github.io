@@ -7,7 +7,7 @@ main {
     }
 
     .chapter-details {
-        width: 100%;
+        width: calc(100vw - 70px);
         margin: auto;
         padding: 25px;
         border-radius: 10px;

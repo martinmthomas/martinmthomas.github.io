@@ -49,7 +49,7 @@ interface Skill {
 }
 
 enum SkillProficiencyEnum {
-    expert = 'Expert', intermediate = 'Intermediate', beginner = 'Beginner'
+    expert = 'Expert', intermediate = 'Average', beginner = 'Beginner'
 }
 
 enum SkillsEnum {
@@ -86,9 +86,9 @@ class Chapters {
                 { name: SkillsEnum.servicebus, description: 'Azure Service Bus', proficiency: SkillProficiencyEnum.expert, years: 4 },
                 { name: SkillsEnum.sql, description: 'SQL Server', proficiency: SkillProficiencyEnum.expert, years: 12 },
                 { name: SkillsEnum.cos, description: 'Cosmos DB', proficiency: SkillProficiencyEnum.intermediate, years: 4 },
-                { name: SkillsEnum.nodejs, description: 'Node.js', proficiency: SkillProficiencyEnum.intermediate, years: 1 },
                 { name: SkillsEnum.gcloud, description: 'Google Cloud', proficiency: SkillProficiencyEnum.intermediate, years: 1 },
-                { name: SkillsEnum.firebase, description: 'Firebase', proficiency: SkillProficiencyEnum.intermediate, years: 1 }
+                { name: SkillsEnum.firebase, description: 'Firebase', proficiency: SkillProficiencyEnum.intermediate, years: 1 },
+                { name: SkillsEnum.nodejs, description: 'Node.js', proficiency: SkillProficiencyEnum.beginner, years: 1 }
             ]
         } as SkillsChapter,
         {

@@ -38,7 +38,7 @@ class Templates {
     <li>
         <span class="logo {name}-logo"></span>
         <span class="skill-description">{description}</span>
-        <span class="skill-proficiency">{proficiency} <em>({years} years)</em></span>
+        <span class="skill-proficiency">{proficiency} <em>({years} yrs)</em></span>
     </li>`;
 
     static readonly introTemplate = `

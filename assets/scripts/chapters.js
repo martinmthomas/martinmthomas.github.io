@@ -2,7 +2,7 @@
 var SkillProficiencyEnum;
 (function (SkillProficiencyEnum) {
     SkillProficiencyEnum["expert"] = "Expert";
-    SkillProficiencyEnum["intermediate"] = "Intermediate";
+    SkillProficiencyEnum["intermediate"] = "Average";
     SkillProficiencyEnum["beginner"] = "Beginner";
 })(SkillProficiencyEnum || (SkillProficiencyEnum = {}));
 var SkillsEnum;
@@ -51,9 +51,9 @@ var Chapters = /** @class */ (function () {
                 { name: SkillsEnum.servicebus, description: 'Azure Service Bus', proficiency: SkillProficiencyEnum.expert, years: 4 },
                 { name: SkillsEnum.sql, description: 'SQL Server', proficiency: SkillProficiencyEnum.expert, years: 12 },
                 { name: SkillsEnum.cos, description: 'Cosmos DB', proficiency: SkillProficiencyEnum.intermediate, years: 4 },
-                { name: SkillsEnum.nodejs, description: 'Node.js', proficiency: SkillProficiencyEnum.intermediate, years: 1 },
                 { name: SkillsEnum.gcloud, description: 'Google Cloud', proficiency: SkillProficiencyEnum.intermediate, years: 1 },
-                { name: SkillsEnum.firebase, description: 'Firebase', proficiency: SkillProficiencyEnum.intermediate, years: 1 }
+                { name: SkillsEnum.firebase, description: 'Firebase', proficiency: SkillProficiencyEnum.intermediate, years: 1 },
+                { name: SkillsEnum.nodejs, description: 'Node.js', proficiency: SkillProficiencyEnum.beginner, years: 1 }
             ]
         },
         {

@@ -107,9 +107,17 @@
         width: 400px;
     }
 
+    @media (max-width: $mobile-breakpoint) {
+        padding-inline-start: 0px;
+    }
+
     li {
         display: flex;
         margin-bottom: 10px;
+
+        .skill-proficiency > em {
+            font-size: 12px;
+        }
     }
 
     span {
