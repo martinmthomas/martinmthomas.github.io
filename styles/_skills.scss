@@ -115,6 +115,7 @@
     span {
         flex-grow: 1;
         flex-basis: 0;
+        margin: auto 0px;
     }
 
     span.logo {
@@ -124,6 +125,6 @@
     .logo.firebase-logo {
         // firebase-logo has some margin for the inline display with other logos which
         // is not required in the skills-summary section
-        margin: 0;
+        margin: auto 0;
     }
 }

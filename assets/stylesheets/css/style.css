@@ -110,13 +110,14 @@
 
 .skills-summary span {
   flex-grow: 1;
-  flex-basis: 0; }
+  flex-basis: 0;
+  margin: auto 0px; }
 
 .skills-summary span.logo {
   flex-grow: 0.5; }
 
 .skills-summary .logo.firebase-logo {
-  margin: 0; }
+  margin: auto 0; }
 
 :root {
   --nav-max-height: 324px;
