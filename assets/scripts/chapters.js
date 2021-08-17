@@ -167,7 +167,7 @@ var Chapters = /** @class */ (function () {
             yearFrom: 'Jan 2010',
             yearTo: 'Jan 2015',
             skills: [SkillsEnum.ng, SkillsEnum.netframework, SkillsEnum.jq, SkillsEnum.cs, SkillsEnum.ts, SkillsEnum.sql],
-            summary: "HCL is a leading software services company that provides custom solutions to its customers. As HCL is a services company, I have played different roles during my tenure at HCL working for Commonwealth Bank of Australia.",
+            summary: "HCL is a leading software services company that provides custom solutions to its customers. \n                As HCL is a services company, I have played different roles during my tenure at HCL working for \n                Commonwealth Bank of Australia <img src=\"assets/imgs/companies/cba.png\" class=\"cba\">",
             responsibilities: [
                 "Develop ASP.NET 3.5 web applications for CommBank platform like School Banking, Credit card comparison, etc.",
                 "Develop .NET Winform applications using .NET 2.0, PLSQL 7.0 and Oracle 10g."

@@ -45,5 +45,14 @@ main {
         .cert-since {
             font-size: 14px;
         }
+
+        .summary {
+            .cba {
+                top: 5px;
+                position: relative;
+                width: 35px;
+                left: -5px;
+            }
+        }
     }
 }

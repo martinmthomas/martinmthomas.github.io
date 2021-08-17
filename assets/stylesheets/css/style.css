@@ -221,6 +221,11 @@ main {
         font-size: 14px; }
     main .chapter-details .cert-since {
       font-size: 14px; }
+    main .chapter-details .summary .cba {
+      top: 5px;
+      position: relative;
+      width: 35px;
+      left: -5px; }
 
 @media (max-width: 700px) {
   .hide-sm {
