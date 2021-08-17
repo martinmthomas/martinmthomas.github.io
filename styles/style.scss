@@ -1,27 +1,31 @@
+@import "variables";
 @import "skills";
 @import "nav";
 @import "chapter";
 @import "responsibilities";
 
 .hide-sm {
-    @media (max-width: 750px) {
+    @media (max-width: $mobile-breakpoint) {
         display: none !important;
     }
 }
 
 .show-sm {
-    @media (min-width: 751px) {
+    @media (min-width: $mobile-breakpoint) {
         display: none !important;
     }
+}
+
+html {
+    width: 100%;
+    height: 100%;
 }
 
 body {
     font-family: "Cairo", sans-serif;
     display: flex;
-    min-width: 100vw;
-    min-height: 100vh;
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     margin: 0px;
     background: url("../../imgs/nostalgia.jpg");
     background-size: 100% 100%;
@@ -31,12 +35,11 @@ body {
     header {
         text-align: right;
         margin: 80px 0px;
-    }
 
-    main {
-        display: flex;
-        width: 800px;
-        margin-bottom: auto;
+        @media (max-width: $mobile-breakpoint) {
+            height: 50px;
+            margin: 40px 0px 20px 0px;
+        }
     }
 
     .icon-btn {
@@ -47,6 +50,12 @@ body {
         cursor: pointer;
     }
 
+    .side-menu-icon {
+        width: 28px;
+        position: absolute;
+        left: 10px;
+    }
+
     .speaker {
         position: absolute;
         display: inline-block;
@@ -55,14 +64,14 @@ body {
         .speaker-icon {
             width: 30px;
             position: absolute;
-            left: calc(100% - 70px);
+            left: calc(100% - 43px);
         }
 
         .speaker-close-icon {
             width: 18px;
             position: absolute;
             top: 13px;
-            left: -55px;
+            left: -30px;
         }
     }
 }
@@ -70,6 +79,11 @@ body {
 .content {
     display: flex;
     flex-direction: column;
+    margin: 0px 10px 10px 10px;
+
+    @media (min-width: $mobile-breakpoint) {
+        margin-right: 25px;
+    }
 }
 
 .mb-0 {

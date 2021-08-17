@@ -1,14 +1,16 @@
 main {
     display: flex;
-    max-width: 800px;
-    margin-right: auto;
+
+    @media (min-width: $mobile-breakpoint) {
+        max-width: 800px;
+        margin-right: auto;
+    }
 
     .chapter-details {
         width: 100%;
         margin: auto;
         padding: 25px;
         border-radius: 10px;
-        margin-right: 25px;
         backdrop-filter: blur(25px);
         box-shadow: 0px 10px 20px black;
 

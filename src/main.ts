@@ -24,12 +24,25 @@ class Profile {
         this.addClickHandler('scroll_up', this.scrollUp);
         this.addClickHandler('scroll_down', this.scrollDown);
 
+        this.addClickHandler('side_nav_btn', this.toggleSideNav);
+
         // Sets max height of the navigation menu so that only certain number of chapters 
         // are visible by default.
         document.documentElement.style.setProperty('--nav-max-height', (this.navHeight * this.numOfChaptersDisplayed) + 'px');
 
         // displays a default chapter
         this.showChapter('intro', true);
+    }
+
+    /** Used in mobile view to toggle Side Nav */
+    toggleSideNav() {
+        const className = 'hide-sm';
+        const nav = document.getElementById('nav');
+        if (nav?.classList.contains(className)) {
+            nav.classList.remove(className);
+        } else {
+            nav?.classList.add(className);
+        }
     }
 
     showNav() {
@@ -136,6 +149,7 @@ class Profile {
     showChapter(selectedChapterName: any, isInit = false) {
         // when page is loading first time, do not play the sound.
         if (!isInit) {
+            this.toggleSideNav();
             this.playSound('click_audio');
         }
 

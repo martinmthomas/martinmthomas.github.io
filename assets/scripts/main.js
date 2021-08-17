@@ -29,11 +29,23 @@ var Profile = /** @class */ (function () {
         // Click handler for scroll
         this.addClickHandler('scroll_up', this.scrollUp);
         this.addClickHandler('scroll_down', this.scrollDown);
+        this.addClickHandler('side_nav_btn', this.toggleSideNav);
         // Sets max height of the navigation menu so that only certain number of chapters 
         // are visible by default.
         document.documentElement.style.setProperty('--nav-max-height', (this.navHeight * this.numOfChaptersDisplayed) + 'px');
         // displays a default chapter
         this.showChapter('intro', true);
+    };
+    /** Used in mobile view to toggle Side Nav */
+    Profile.prototype.toggleSideNav = function () {
+        var className = 'hide-sm';
+        var nav = document.getElementById('nav');
+        if (nav === null || nav === void 0 ? void 0 : nav.classList.contains(className)) {
+            nav.classList.remove(className);
+        }
+        else {
+            nav === null || nav === void 0 ? void 0 : nav.classList.add(className);
+        }
     };
     Profile.prototype.showNav = function () {
         var _this = this;
@@ -131,6 +143,7 @@ var Profile = /** @class */ (function () {
         if (isInit === void 0) { isInit = false; }
         // when page is loading first time, do not play the sound.
         if (!isInit) {
+            this.toggleSideNav();
             this.playSound('click_audio');
         }
         var chapter = Chapters.items.filter(function (c) { return c.id === selectedChapterName; })[0];

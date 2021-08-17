@@ -21,17 +21,12 @@
 </head>
 
 <body>
-    <div class="warning show-sm">
-        This is still a work in progress. Please open in a desktop browser to
-        view this page.
-    </div>
-
-    <nav class="reel hide-sm">
+    <nav id="nav" class="reel hide-sm">
         <div class="reel-wrapper">
             <div class="chapter-navs" id="chapter-navs"></div>
         </div>
 
-        <div class="scroll-nav-group">
+        <div class="scroll-nav-group hide-sm">
             <img src="assets/imgs/reel.png" alt="Scroll Down"
                 class="scroll-nav icon-btn" id="scroll_down">
             <img src="assets/imgs/reel.png" alt="Scroll Up"
@@ -40,8 +35,11 @@
         </div>
     </nav>
 
-    <div class="hide-sm content">
-        <header class="hide-sm">
+    <div class="content">
+        <header>
+            <img id="side_nav_btn" src="assets/imgs/side-menu.png"
+                alt="Side Menu Toggle" class="side-menu-icon icon-btn show-sm">
+
             <div class="speaker" id="speaker_btn">
                 <img src="assets/imgs/bullhorn.png" alt="mute or unmute"
                     class="speaker-icon icon-btn">

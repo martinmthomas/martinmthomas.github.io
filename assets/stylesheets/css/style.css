@@ -100,18 +100,23 @@
     width: 30px;
     height: 30px; }
 
-.skills-summary {
-  width: 400px; }
-  .skills-summary li {
-    display: flex;
-    margin-bottom: 10px; }
-  .skills-summary span {
-    flex-grow: 1;
-    flex-basis: 0; }
-  .skills-summary span.logo {
-    flex-grow: 0.5; }
-  .skills-summary .logo.firebase-logo {
-    margin: 0; }
+@media (min-width: 700px) {
+  .skills-summary {
+    width: 400px; } }
+
+.skills-summary li {
+  display: flex;
+  margin-bottom: 10px; }
+
+.skills-summary span {
+  flex-grow: 1;
+  flex-basis: 0; }
+
+.skills-summary span.logo {
+  flex-grow: 0.5; }
+
+.skills-summary .logo.firebase-logo {
+  margin: 0; }
 
 :root {
   --nav-max-height: 324px;
@@ -123,26 +128,27 @@ nav {
   margin: auto 40px;
   margin-top: 160px;
   min-width: 175px; }
-  nav,
-  nav .reel {
+  @media (max-width: 700px) {
+    nav {
+      position: absolute;
+      z-index: 9999;
+      margin: 100px 10px 10px 10px; } }
+  nav-wrapper,
+  nav .reel-wrapper {
     display: flex;
-    flex-direction: column; }
-    nav-wrapper,
-    nav .reel-wrapper {
-      display: flex;
-      box-shadow: 2px 5px 7px black;
-      background-image: url("../../imgs/film.png");
-      background-size: 175px;
-      width: 175px;
-      height: var(--nav-max-height);
-      overflow: scroll;
-      overflow-x: hidden;
-      background-repeat: repeat-y;
-      scrollbar-width: none; }
-      nav-wrapper::-webkit-scrollbar,
-      nav .reel-wrapper::-webkit-scrollbar {
-        width: 0;
-        background: transparent; }
+    box-shadow: 2px 5px 7px black;
+    background-image: url("../../imgs/film.png");
+    background-size: 175px;
+    width: 175px;
+    height: var(--nav-max-height);
+    overflow: scroll;
+    overflow-x: hidden;
+    background-repeat: repeat-y;
+    scrollbar-width: none; }
+    nav-wrapper::-webkit-scrollbar,
+    nav .reel-wrapper::-webkit-scrollbar {
+      width: 0;
+      background: transparent; }
   nav .scroll-nav-group {
     text-align: center;
     margin: 20px 0px; }
@@ -183,15 +189,16 @@ nav {
         margin-left: 10px; }
 
 main {
-  display: flex;
-  max-width: 800px;
-  margin-right: auto; }
+  display: flex; }
+  @media (min-width: 700px) {
+    main {
+      max-width: 800px;
+      margin-right: auto; } }
   main .chapter-details {
     width: 100%;
     margin: auto;
     padding: 25px;
     border-radius: 10px;
-    margin-right: 25px;
     backdrop-filter: blur(25px);
     box-shadow: 0px 10px 20px black; }
     main .chapter-details .company {
@@ -214,21 +221,23 @@ main {
     main .chapter-details .cert-since {
       font-size: 14px; }
 
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   .hide-sm {
     display: none !important; } }
 
-@media (min-width: 751px) {
+@media (min-width: 700px) {
   .show-sm {
     display: none !important; } }
+
+html {
+  width: 100%;
+  height: 100%; }
 
 body {
   font-family: "Cairo", sans-serif;
   display: flex;
-  min-width: 100vw;
-  min-height: 100vh;
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   margin: 0px;
   background: url("../../imgs/nostalgia.jpg");
   background-size: 100% 100%;
@@ -237,16 +246,20 @@ body {
   body header {
     text-align: right;
     margin: 80px 0px; }
-  body main {
-    display: flex;
-    width: 800px;
-    margin-bottom: auto; }
+    @media (max-width: 700px) {
+      body header {
+        height: 50px;
+        margin: 40px 0px 20px 0px; } }
   body .icon-btn {
     backdrop-filter: blur(25px);
     padding: 7px;
     border-radius: 7px;
     box-shadow: 2px 2px 15px black;
     cursor: pointer; }
+  body .side-menu-icon {
+    width: 28px;
+    position: absolute;
+    left: 10px; }
   body .speaker {
     position: absolute;
     display: inline-block;
@@ -254,16 +267,20 @@ body {
     body .speaker .speaker-icon {
       width: 30px;
       position: absolute;
-      left: calc(100% - 70px); }
+      left: calc(100% - 43px); }
     body .speaker .speaker-close-icon {
       width: 18px;
       position: absolute;
       top: 13px;
-      left: -55px; }
+      left: -30px; }
 
 .content {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin: 0px 10px 10px 10px; }
+  @media (min-width: 700px) {
+    .content {
+      margin-right: 25px; } }
 
 .mb-0 {
   margin-bottom: 0; }

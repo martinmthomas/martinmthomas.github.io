@@ -13,11 +13,14 @@ nav {
     margin-top: 160px;
     min-width: $nav-width;
 
+    @media (max-width: $mobile-breakpoint) {
+        position: absolute;
+        z-index: 9999;
+        margin: 100px 10px 10px 10px;
+    }
+
     &,
     .reel {
-        display: flex;
-        flex-direction: column;
-
         &-wrapper {
             display: flex;
             box-shadow: 2px 5px 7px black;
