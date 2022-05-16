@@ -70,8 +70,18 @@
         @include logo();
     }
 
+    &.iothub-logo {
+        background: url("../../imgs/skills/iothub.png");
+        @include logo();
+    }
+
     &.cos-logo {
         background: url("../../imgs/skills/cosmos.png");
+        @include logo();
+    }
+
+    &.efcore-logo {
+        background: url("../../imgs/skills/efcore.png");
         @include logo();
     }
 

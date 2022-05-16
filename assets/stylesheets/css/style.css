@@ -62,8 +62,20 @@
     background-size: 30px 30px;
     width: 30px;
     height: 30px; }
+  .logo.iothub-logo {
+    background: url("../../imgs/skills/iothub.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px; }
   .logo.cos-logo {
     background: url("../../imgs/skills/cosmos.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px; }
+  .logo.efcore-logo {
+    background: url("../../imgs/skills/efcore.png");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     width: 30px;

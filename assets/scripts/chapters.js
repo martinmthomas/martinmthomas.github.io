@@ -13,12 +13,14 @@ var SkillsEnum;
     SkillsEnum["net"] = "net";
     SkillsEnum["netframework"] = "netframework";
     SkillsEnum["ts"] = "ts";
+    SkillsEnum["ef"] = "efcore";
     SkillsEnum["sql"] = "sql";
     SkillsEnum["cos"] = "cos";
     SkillsEnum["firebase"] = "firebase";
     SkillsEnum["gcloud"] = "gcloud";
     SkillsEnum["az"] = "az";
     SkillsEnum["servicebus"] = "servicebus";
+    SkillsEnum["iothub"] = "iothub";
     SkillsEnum["nodejs"] = "nodejs";
     SkillsEnum["jq"] = "jq";
 })(SkillsEnum || (SkillsEnum = {}));
@@ -50,11 +52,33 @@ var Chapters = /** @class */ (function () {
                 { name: SkillsEnum.az, description: 'Azure', proficiency: SkillProficiencyEnum.expert, years: 6 },
                 { name: SkillsEnum.servicebus, description: 'Azure Service Bus', proficiency: SkillProficiencyEnum.expert, years: 4 },
                 { name: SkillsEnum.sql, description: 'SQL Server', proficiency: SkillProficiencyEnum.expert, years: 12 },
-                { name: SkillsEnum.cos, description: 'Cosmos DB', proficiency: SkillProficiencyEnum.intermediate, years: 4 },
+                { name: SkillsEnum.cos, description: 'Cosmos DB', proficiency: SkillProficiencyEnum.expert, years: 5 },
+                { name: SkillsEnum.ef, description: 'Entity Framework', proficiency: SkillProficiencyEnum.intermediate, years: 4 },
                 { name: SkillsEnum.gcloud, description: 'Google Cloud', proficiency: SkillProficiencyEnum.intermediate, years: 1 },
                 { name: SkillsEnum.firebase, description: 'Firebase', proficiency: SkillProficiencyEnum.intermediate, years: 1 },
+                { name: SkillsEnum.iothub, description: 'Azure IoT Hub', proficiency: SkillProficiencyEnum.beginner, years: 1 },
                 { name: SkillsEnum.nodejs, description: 'Node.js', proficiency: SkillProficiencyEnum.beginner, years: 1 }
             ]
+        },
+        {
+            type: 'Experience',
+            id: 'zoomo',
+            logoUrl: 'assets/imgs/companies/zoomo.jpg',
+            companyName: 'Zoomo',
+            companyShort: 'Zoomo',
+            role: 'Lead Software Engineer',
+            roleShort: 'Lead Engineer',
+            yearFrom: 'Sep 2021',
+            yearTo: 'Present',
+            skills: [SkillsEnum.ng, SkillsEnum.net, SkillsEnum.cs, SkillsEnum.az, SkillsEnum.iothub, SkillsEnum.servicebus, SkillsEnum.ef, SkillsEnum.sql, SkillsEnum.cos],
+            summary: "Zoomo is the world's leader in light electric vehicles (LEVs) and aftermarket servicing, built on the experience of thousands of delivery riders. With the recent completion of $80 million Series B round, Zoomo strives to provide best software solutions to its business partners and riders across 3 continents.",
+            responsibilities: [
+                "Create a globally scalable/high concurrent Web and IoT solutions using .NET Core, Azure IoT Hub, Angular and other Azure products.",
+                "Create identity solutions using OAuth for inhouse products and integrations.",
+                "Participate in recruitment process to help set up the best engineering team both onshore and offshore.",
+                "Mentoring team, perform code review to ensure code quality and review/improve engineering practices."
+            ],
+            achievements: []
         },
         {
             type: 'Experience',
@@ -64,8 +88,8 @@ var Chapters = /** @class */ (function () {
             companyShort: 'Cape',
             role: 'Lead Software Engineer',
             roleShort: 'Lead Engineer',
-            yearFrom: 'July 2021',
-            yearTo: 'present',
+            yearFrom: 'Nov 2020',
+            yearTo: 'Sep 2021',
             skills: [SkillsEnum.ng, SkillsEnum.net, SkillsEnum.nodejs, SkillsEnum.cs, SkillsEnum.ts, SkillsEnum.gcloud, SkillsEnum.firebase, SkillsEnum.sql],
             summary: "Cape is an early stage startup looking to\n            launch a BNPL product for Small and Medium Businesses in the\n            APAC region. I have been part of their journey since the very\n            beginning of the product development working closely with the\n            founders. I joined as a\n            Full time employee in July 2021.",
             responsibilities: [
