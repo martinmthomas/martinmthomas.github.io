@@ -53,9 +53,9 @@ enum SkillProficiencyEnum {
 }
 
 enum SkillsEnum {
-    ng = "ng", bs = "bs", cs = "cs", net = "net", netframework = "netframework",
-    ts = "ts", ef = "efcore", sql = "sql", cos = "cos", firebase = "firebase",
-    gcloud = "gcloud", az = "az", servicebus = "servicebus", iothub = "iothub",
+    rc = "react", ng = "ng", bs = "bs", cs = "cs", net = "net", netframework = "netframework",
+    ts = "ts", ef = "efcore", sql = "sql", pg = "pg", cos = "cos", firebase = "firebase",
+    gcloud = "gcloud", az = "az", aws = "aws", servicebus = "servicebus", iothub = "iothub",
     nodejs = "nodejs", jq = "jq",
 }
 
@@ -78,7 +78,6 @@ class Chapters {
             id: 'skills',
             skills: [
                 { name: SkillsEnum.ng, description: 'Angular', proficiency: SkillProficiencyEnum.expert, years: 8 },
-                { name: SkillsEnum.bs, description: 'Bootstrap', proficiency: SkillProficiencyEnum.expert, years: 8 },
                 { name: SkillsEnum.cs, description: 'CSharp', proficiency: SkillProficiencyEnum.expert, years: 12 },
                 { name: SkillsEnum.net, description: '.NET Core', proficiency: SkillProficiencyEnum.expert, years: 5 },
                 { name: SkillsEnum.ts, description: 'Typescript', proficiency: SkillProficiencyEnum.expert, years: 8 },
@@ -87,12 +86,31 @@ class Chapters {
                 { name: SkillsEnum.sql, description: 'SQL Server', proficiency: SkillProficiencyEnum.expert, years: 12 },
                 { name: SkillsEnum.cos, description: 'Cosmos DB', proficiency: SkillProficiencyEnum.expert, years: 5 },
                 { name: SkillsEnum.ef, description: 'Entity Framework', proficiency: SkillProficiencyEnum.intermediate, years: 4 },
+                { name: SkillsEnum.aws, description: 'AWS', proficiency: SkillProficiencyEnum.intermediate, years: 1 },
+                { name: SkillsEnum.rc, description: 'React', proficiency: SkillProficiencyEnum.intermediate, years: 1 },
+                { name: SkillsEnum.pg, description: 'PostgreSQL', proficiency: SkillProficiencyEnum.intermediate, years: 1 },
                 { name: SkillsEnum.gcloud, description: 'Google Cloud', proficiency: SkillProficiencyEnum.intermediate, years: 1 },
-                { name: SkillsEnum.firebase, description: 'Firebase', proficiency: SkillProficiencyEnum.intermediate, years: 1 },
-                { name: SkillsEnum.iothub, description: 'Azure IoT Hub', proficiency: SkillProficiencyEnum.beginner, years: 1 },
-                { name: SkillsEnum.nodejs, description: 'Node.js', proficiency: SkillProficiencyEnum.beginner, years: 1 }
+                { name: SkillsEnum.iothub, description: 'Azure IoT Hub', proficiency: SkillProficiencyEnum.beginner, years: 1 }
             ]
         } as SkillsChapter,
+        {
+            type: 'Experience',
+            id: 'edval',
+            logoUrl: 'assets/imgs/companies/edval.jpg',
+            companyName: 'Edval Timetables',
+            companyShort: 'Edval',
+            role: 'Lead Software Engineer',
+            roleShort: 'Lead Engineer',
+            yearFrom: 'Jul 2022',
+            yearTo: 'Present',
+            skills: [SkillsEnum.rc, SkillsEnum.net, SkillsEnum.cs, SkillsEnum.aws, SkillsEnum.ef, SkillsEnum.pg],
+            summary: `Edval is an expert in creating timetabling solutions for schools. Edval software suite is used by over 1400 schools across 16 countries. With 99% customer retention rate, Edval is considered as a market leader.`,
+            responsibilities: [
+                `Creating Microservice based tech solutions for timetabling problems while ensuring strict privacy compliance by following GDPR and enforcing other regional rules.`,
+                `Mentoring team, perform code review to ensure code quality and review/improve engineering practices.`
+            ],
+            achievements: []
+        } as ExperienceChapter,
         {
             type: 'Experience',
             id: 'zoomo',
@@ -102,7 +120,7 @@ class Chapters {
             role: 'Lead Software Engineer',
             roleShort: 'Lead Engineer',
             yearFrom: 'Sep 2021',
-            yearTo: 'Present',
+            yearTo: 'Jun 2022',
             skills: [SkillsEnum.ng, SkillsEnum.net, SkillsEnum.cs, SkillsEnum.az, SkillsEnum.iothub, SkillsEnum.servicebus, SkillsEnum.ef, SkillsEnum.sql, SkillsEnum.cos],
             summary: `Zoomo is the world's leader in light electric vehicles (LEVs) and aftermarket servicing, built on the experience of thousands of delivery riders. With the recent completion of $80 million Series B round, Zoomo strives to provide best software solutions to its business partners and riders across 3 continents.`,
             responsibilities: [

@@ -1,116 +1,550 @@
 .logo {
   width: 30px;
   height: 30px;
-  margin: auto 0px; }
+  margin: auto 0px;
+  display: inline-block; }
   .logo.brilliance {
     width: 80px; }
   .logo.hcl {
     width: 80px; }
-
-.skills {
-  padding: 10px 0px; }
-  .skills > .logo {
-    margin: 0px 4px; }
-
-.logo {
-  display: inline-block; }
   .logo.ng-logo {
     background: url("../../imgs/skills/angular.svg");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    position: relative; }
+    .logo.ng-logo:before {
+      content: "Angular";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.ng-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
+  .logo.react-logo {
+    background: url("../../imgs/skills/react.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+    position: relative; }
+    .logo.react-logo:before {
+      content: "React";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.react-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
   .logo.bs-logo {
     background: url("../../imgs/skills/bootstrap.png");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    position: relative; }
+    .logo.bs-logo:before {
+      content: "Bootstrap";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.bs-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
   .logo.cs-logo {
     background: url("../../imgs/skills/csharp.png");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    position: relative; }
+    .logo.cs-logo:before {
+      content: "C#";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.cs-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
   .logo.net-logo {
     background: url("../../imgs/skills/net-core.png");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    position: relative; }
+    .logo.net-logo:before {
+      content: ".NET Core";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.net-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
   .logo.ts-logo {
     background: url("../../imgs/skills/typescript.png");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    position: relative; }
+    .logo.ts-logo:before {
+      content: "Typescript";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.ts-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
   .logo.gcloud-logo {
     background: url("../../imgs/skills/gcloud.png");
     background-repeat: no-repeat;
     background-size: 45px 30px;
     width: 35px;
-    height: 30px; }
+    height: 30px;
+    position: relative; }
+    .logo.gcloud-logo:before {
+      content: "GCP";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.gcloud-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
   .logo.az-logo {
     background: url("../../imgs/skills/azure.png");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    position: relative; }
+    .logo.az-logo:before {
+      content: "Azure";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.az-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
+  .logo.aws-logo {
+    background: url("../../imgs/skills/aws.jpg");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+    position: relative; }
+    .logo.aws-logo:before {
+      content: "AWS";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.aws-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
   .logo.servicebus-logo {
     background: url("../../imgs/skills/service-bus.png");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    position: relative; }
+    .logo.servicebus-logo:before {
+      content: "Az Service Bus";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.servicebus-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
   .logo.iothub-logo {
     background: url("../../imgs/skills/iothub.png");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    position: relative; }
+    .logo.iothub-logo:before {
+      content: "Az IoT";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.iothub-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
   .logo.cos-logo {
     background: url("../../imgs/skills/cosmos.png");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    position: relative; }
+    .logo.cos-logo:before {
+      content: "CosmosDB";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.cos-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
   .logo.efcore-logo {
     background: url("../../imgs/skills/efcore.png");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    position: relative; }
+    .logo.efcore-logo:before {
+      content: "EF Core";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.efcore-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
   .logo.sql-logo {
     background: url("../../imgs/skills/mssqlserver.svg");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    position: relative; }
+    .logo.sql-logo:before {
+      content: "SQL Server";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.sql-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
+  .logo.pg-logo {
+    background: url("../../imgs/skills/pg.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+    position: relative; }
+    .logo.pg-logo:before {
+      content: "PostgresSQL";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.pg-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
   .logo.firebase-logo {
     background: url("../../imgs/skills/firebase.png");
     margin: 0px 6px;
     background-repeat: no-repeat;
     background-size: 30px 30px;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    position: relative; }
+    .logo.firebase-logo:before {
+      content: "Firebase";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.firebase-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
   .logo.nodejs-logo {
     background: url("../../imgs/skills/nodejs.png");
     background-repeat: no-repeat;
     background-size: 40px 30px;
     width: 40px;
-    height: 30px; }
+    height: 30px;
+    position: relative; }
+    .logo.nodejs-logo:before {
+      content: "NodeJS";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.nodejs-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
   .logo.netframework-logo {
     background: url("../../imgs/skills/net-framework.png");
     background-repeat: no-repeat;
     background-size: 35px 30px;
     width: 35px;
-    height: 30px; }
+    height: 30px;
+    position: relative; }
+    .logo.netframework-logo:before {
+      content: ".NET Framework";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.netframework-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
   .logo.jq-logo {
     background: url("../../imgs/skills/jquery.jpg");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    position: relative; }
+    .logo.jq-logo:before {
+      content: "Jquery";
+      font-size: 12px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px black;
+      background: #5e7076;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0px 10px;
+      transition: opacity 500ms ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%; }
+    .logo.jq-logo:hover:before {
+      opacity: 1;
+      visibility: visible; }
+
+.skills {
+  padding: 10px 0px; }
+  .skills > .logo {
+    margin: 0px 4px; }
 
 @media (min-width: 700px) {
   .skills-summary {

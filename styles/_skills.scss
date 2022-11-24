@@ -1,148 +1,198 @@
-@mixin logo($container-width: 30px, $container-height: 30px, $image-width: 30px, $image-height: 30px) {
-    background-repeat: no-repeat;
-    background-size: $image-width $image-height;
-    width: $container-width;
-    height: $container-height;
+// Styles to display a tooltip on hover.
+@mixin tooltipOnHover($title) {
+  position: relative;
+  &:before {
+    content: $title;
+    font-size: 12px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px black;
+    background: #5e7076;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 0px 10px;
+    transition: opacity 500ms ease-in-out;
+
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 110%;
+  }
+
+  &:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@mixin logo(
+  $title: "",
+  $container-width: 30px,
+  $container-height: 30px,
+  $image-width: 30px,
+  $image-height: 30px
+) {
+  background-repeat: no-repeat;
+  background-size: $image-width $image-height;
+  width: $container-width;
+  height: $container-height;
+
+  @include tooltipOnHover($title);
 }
 
 .logo {
-    width: 30px;
-    height: 30px;
-    margin: auto 0px;
+  width: 30px;
+  height: 30px;
+  margin: auto 0px;
+  display: inline-block;
 
-    &.brilliance {
-        width: 80px;
-    }
+  &.brilliance {
+    width: 80px;
+  }
 
-    &.hcl {
-        width: 80px;
-    }
+  &.hcl {
+    width: 80px;
+  }
+
+  &.ng-logo {
+    background: url("../../imgs/skills/angular.svg");
+    @include logo("Angular");
+  }
+
+  &.react-logo {
+    background: url("../../imgs/skills/react.png");
+    @include logo("React");
+  }
+
+  &.bs-logo {
+    background: url("../../imgs/skills/bootstrap.png");
+    @include logo("Bootstrap");
+  }
+
+  &.cs-logo {
+    background: url("../../imgs/skills/csharp.png");
+    @include logo("C#");
+  }
+
+  &.net-logo {
+    background: url("../../imgs/skills/net-core.png");
+    @include logo(".NET Core");
+  }
+
+  &.ts-logo {
+    background: url("../../imgs/skills/typescript.png");
+    @include logo("Typescript");
+  }
+
+  &.gcloud-logo {
+    background: url("../../imgs/skills/gcloud.png");
+    @include logo("GCP", 35px, 30px, 45px, 30px);
+  }
+
+  &.az-logo {
+    background: url("../../imgs/skills/azure.png");
+    @include logo("Azure");
+  }
+
+  &.aws-logo {
+    background: url("../../imgs/skills/aws.jpg");
+    @include logo("AWS");
+  }
+
+  &.servicebus-logo {
+    background: url("../../imgs/skills/service-bus.png");
+    @include logo("Az Service Bus");
+  }
+
+  &.iothub-logo {
+    background: url("../../imgs/skills/iothub.png");
+    @include logo("Az IoT");
+  }
+
+  &.cos-logo {
+    background: url("../../imgs/skills/cosmos.png");
+    @include logo("CosmosDB");
+  }
+
+  &.efcore-logo {
+    background: url("../../imgs/skills/efcore.png");
+    @include logo("EF Core");
+  }
+
+  &.sql-logo {
+    background: url("../../imgs/skills/mssqlserver.svg");
+    @include logo("SQL Server");
+  }
+
+  &.pg-logo {
+    background: url("../../imgs/skills/pg.png");
+    @include logo("PostgresSQL");
+  }
+
+  &.firebase-logo {
+    background: url("../../imgs/skills/firebase.png");
+    margin: 0px 6px;
+    @include logo("Firebase");
+  }
+
+  &.nodejs-logo {
+    background: url("../../imgs/skills/nodejs.png");
+    @include logo("NodeJS", 40px, 30px, 40px, 30px);
+  }
+
+  &.netframework-logo {
+    background: url("../../imgs/skills/net-framework.png");
+    @include logo(".NET Framework", 35px, 30px, 35px, 30px);
+  }
+
+  &.jq-logo {
+    background: url("../../imgs/skills/jquery.jpg");
+    @include logo("Jquery");
+  }
 }
 
 .skills {
-    padding: 10px 0px;
+  padding: 10px 0px;
 
-    > .logo {
-        margin: 0px 4px;
-    }
-}
-
-.logo {
-    display: inline-block;
-
-    &.ng-logo {
-        background: url("../../imgs/skills/angular.svg");
-        @include logo();
-    }
-
-    &.bs-logo {
-        background: url("../../imgs/skills/bootstrap.png");
-        @include logo();
-    }
-
-    &.cs-logo {
-        background: url("../../imgs/skills/csharp.png");
-        @include logo();
-    }
-
-    &.net-logo {
-        background: url("../../imgs/skills/net-core.png");
-        @include logo();
-    }
-
-    &.ts-logo {
-        background: url("../../imgs/skills/typescript.png");
-        @include logo();
-    }
-
-    &.gcloud-logo {
-        background: url("../../imgs/skills/gcloud.png");
-        @include logo(35px, 30px, 45px, 30px);
-    }
-
-    &.az-logo {
-        background: url("../../imgs/skills/azure.png");
-        @include logo();
-    }
-
-    &.servicebus-logo {
-        background: url("../../imgs/skills/service-bus.png");
-        @include logo();
-    }
-
-    &.iothub-logo {
-        background: url("../../imgs/skills/iothub.png");
-        @include logo();
-    }
-
-    &.cos-logo {
-        background: url("../../imgs/skills/cosmos.png");
-        @include logo();
-    }
-
-    &.efcore-logo {
-        background: url("../../imgs/skills/efcore.png");
-        @include logo();
-    }
-
-    &.sql-logo {
-        background: url("../../imgs/skills/mssqlserver.svg");
-        @include logo();
-    }
-
-    &.firebase-logo {
-        background: url("../../imgs/skills/firebase.png");
-        margin: 0px 6px;
-        @include logo();
-    }
-
-    &.nodejs-logo {
-        background: url("../../imgs/skills/nodejs.png");
-        @include logo(40px, 30px, 40px, 30px);
-    }
-
-    &.netframework-logo {
-        background: url("../../imgs/skills/net-framework.png");
-        @include logo(35px, 30px, 35px, 30px);
-    }
-
-    &.jq-logo {
-        background: url("../../imgs/skills/jquery.jpg");
-        @include logo();
-    }
+  > .logo {
+    margin: 0px 4px;
+  }
 }
 
 .skills-summary {
-    @media (min-width: $mobile-breakpoint) {
-        width: 400px;
-    }
+  @media (min-width: $mobile-breakpoint) {
+    width: 400px;
+  }
 
-    @media (max-width: $mobile-breakpoint) {
-        padding-inline-start: 0px;
-    }
+  @media (max-width: $mobile-breakpoint) {
+    padding-inline-start: 0px;
+  }
 
-    li {
-        display: flex;
-        margin-bottom: 10px;
+  li {
+    display: flex;
+    margin-bottom: 10px;
 
-        .skill-proficiency > em {
-            font-size: 12px;
-        }
+    .skill-proficiency > em {
+      font-size: 12px;
     }
+  }
 
-    span {
-        flex-grow: 1;
-        flex-basis: 0;
-        margin: auto 0px;
-    }
+  span {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: auto 0px;
+  }
 
-    span.logo {
-        flex-grow: 0.5;
-    }
+  span.logo {
+    flex-grow: 0.5;
+  }
 
-    .logo.firebase-logo {
-        // firebase-logo has some margin for the inline display with other logos which
-        // is not required in the skills-summary section
-        margin: auto 0;
-    }
+  .logo.firebase-logo {
+    // firebase-logo has some margin for the inline display with other logos which
+    // is not required in the skills-summary section
+    margin: auto 0;
+  }
 }
