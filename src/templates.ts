@@ -1,4 +1,4 @@
-class Templates {
+export class Templates {
     static readonly experienceNavTemplate = `
     <div class="chapter-nav" id="{id}">
         <div class="company">

@@ -63,7 +63,7 @@
   }
 
   &.react-logo {
-    background: url("../../imgs/skills/react.png");
+    background: url("../../imgs/skills/react.svg");
     @include logo("React");
   }
 
@@ -73,47 +73,47 @@
   }
 
   &.cs-logo {
-    background: url("../../imgs/skills/csharp.png");
+    background: url("../../imgs/skills/csharp.svg");
     @include logo("C#");
   }
 
   &.net-logo {
-    background: url("../../imgs/skills/net-core.png");
+    background: url("../../imgs/skills/net-core.svg");
     @include logo(".NET Core");
   }
 
   &.ts-logo {
-    background: url("../../imgs/skills/typescript.png");
+    background: url("../../imgs/skills/typescript.svg");
     @include logo("Typescript");
   }
 
   &.gcloud-logo {
-    background: url("../../imgs/skills/gcloud.png");
-    @include logo("GCP", 35px, 30px, 45px, 30px);
+    background: url("../../imgs/skills/gcloud.svg");
+    @include logo("Google Cloud");
   }
 
   &.az-logo {
-    background: url("../../imgs/skills/azure.png");
+    background: url("../../imgs/skills/azure.svg");
     @include logo("Azure");
   }
 
   &.aws-logo {
-    background: url("../../imgs/skills/aws.jpg");
+    background: url("../../imgs/skills/aws.svg");
     @include logo("AWS");
   }
 
   &.servicebus-logo {
-    background: url("../../imgs/skills/service-bus.png");
+    background: url("../../imgs/skills/service-bus.svg");
     @include logo("Az Service Bus");
   }
 
   &.iothub-logo {
-    background: url("../../imgs/skills/iothub.png");
-    @include logo("Az IoT");
+    background: url("../../imgs/skills/iothub.svg");
+    @include logo("Az IoT Hub");
   }
 
   &.cos-logo {
-    background: url("../../imgs/skills/cosmos.png");
+    background: url("../../imgs/skills/cosmos.svg");
     @include logo("CosmosDB");
   }
 
@@ -124,32 +124,31 @@
 
   &.sql-logo {
     background: url("../../imgs/skills/mssqlserver.svg");
-    @include logo("SQL Server");
+    @include logo("SQL Server", 35px, 30px, 35px, 30px);
   }
 
   &.pg-logo {
-    background: url("../../imgs/skills/pg.png");
+    background: url("../../imgs/skills/pg.svg");
     @include logo("PostgresSQL");
   }
 
   &.firebase-logo {
-    background: url("../../imgs/skills/firebase.png");
-    margin: 0px 6px;
+    background: url("../../imgs/skills/firebase.svg");
     @include logo("Firebase");
   }
 
   &.nodejs-logo {
-    background: url("../../imgs/skills/nodejs.png");
-    @include logo("NodeJS", 40px, 30px, 40px, 30px);
+    background: url("../../imgs/skills/nodejs.svg");
+    @include logo("NodeJS", 35px, 28px, 35px, 30px);
   }
 
   &.netframework-logo {
-    background: url("../../imgs/skills/net-framework.png");
+    background: url("../../imgs/skills/net-framework.svg");
     @include logo(".NET Framework", 35px, 30px, 35px, 30px);
   }
 
   &.jq-logo {
-    background: url("../../imgs/skills/jquery.jpg");
+    background: url("../../imgs/skills/jquery.svg");
     @include logo("Jquery");
   }
 }

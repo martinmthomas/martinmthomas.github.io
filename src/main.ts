@@ -1,3 +1,5 @@
+import { Chapters, CreditsChapter, ExperienceChapter, IntroChapter, SkillsChapter } from "./chapters";
+import { Templates } from "./templates";
 
 class Profile {
     navHeight = 108.5;

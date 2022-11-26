@@ -13,7 +13,7 @@
 
     <title>Flashback: Martin</title>
 
-    <link rel="stylesheet" href="assets/stylesheets/css/style.css">
+    <link rel="stylesheet" href="dist/assets/stylesheets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap"
@@ -27,9 +27,9 @@
         </div>
 
         <div class="scroll-nav-group hide-sm">
-            <img src="assets/imgs/reel.png" alt="Scroll Down"
+            <img src="dist/assets/imgs/reel.png" alt="Scroll Down"
                 class="scroll-nav icon-btn" id="scroll_down">
-            <img src="assets/imgs/reel.png" alt="Scroll Up"
+            <img src="dist/assets/imgs/reel.png" alt="Scroll Up"
                 class="scroll-nav scroll-nav-up icon-btn disabled"
                 id="scroll_up">
         </div>
@@ -37,13 +37,13 @@
 
     <div class="content">
         <header>
-            <img id="side_nav_btn" src="assets/imgs/side-menu.png"
+            <img id="side_nav_btn" src="dist/assets/imgs/side-menu.png"
                 alt="Side Menu Toggle" class="side-menu-icon icon-btn show-sm">
 
             <div class="speaker" id="speaker_btn">
-                <img src="assets/imgs/bullhorn.png" alt="mute or unmute"
+                <img src="dist/assets/imgs/bullhorn.png" alt="mute or unmute"
                     class="speaker-icon icon-btn">
-                <img src="assets/imgs/close.png" alt="mute"
+                <img src="dist/assets/imgs/close.png" alt="mute"
                     class="speaker-close-icon" style="display: none;"
                     id="speaker-close">
             </div>
@@ -52,12 +52,10 @@
         <main id="main"></main>
     </div>
 
-    <script type="text/javascript" src="assets/scripts/templates.js"></script>
-    <script type="text/javascript" src="assets/scripts/chapters.js"></script>
-    <script type="text/javascript" src="assets/scripts/main.js" async></script>
-    <audio src="assets/sounds/click.wav" id="click_audio"></audio>
-    <audio src="assets/sounds/bubble.wav" id="unmute_audio"></audio>
-    <audio src="assets/sounds/film-rolling.m4a" id="film_rolling"></audio>
+    <script type="text/javascript" src="dist/bundle.js"></script>
+    <audio src="dist/assets/sounds/click.wav" id="click_audio"></audio>
+    <audio src="dist/assets/sounds/bubble.wav" id="unmute_audio"></audio>
+    <audio src="dist/assets/sounds/film-rolling.m4a" id="film_rolling"></audio>
 </body>
 
 </html>
