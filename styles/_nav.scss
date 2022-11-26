@@ -10,7 +10,7 @@ nav {
     display: flex;
     flex-direction: column;
     margin: auto 40px;
-    margin-top: 160px;
+    margin-top: 80px;
     min-width: $nav-width;
 
     @media (max-width: $mobile-breakpoint) {
